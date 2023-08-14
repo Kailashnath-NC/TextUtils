@@ -20,20 +20,13 @@ export default function TextForm(props) {
     if (text !== "") {
       newText = newText + text[0].toUpperCase();
       for (let i = 1; i < text.length; i++) {
-        // if (text.charAt(i) === " " && /[a-zA-z]/.test(text.charAt[i + 1]))
         if (text.charAt(i) === " ") {
           while (text.charAt(i) === " ") {
             newText += text.charAt(i);
             i++;
           }
           newText += text[i].toUpperCase();
-        }
-        // {
-        // newText += " " + text[i + 1].toUpperCase();
-        // console.log(i);
-        // i++;
-        // }
-        else newText += text[i].toLowerCase();
+        } else newText += text[i].toLowerCase();
       }
       setText(newText);
     }
@@ -87,7 +80,12 @@ export default function TextForm(props) {
           Clear
         </button>
         <h2>Total Summary</h2>
-        {text.split(" ").length} words and {text.length} chararcters
+        {
+          text.split(/\s+/).filter((element) => {
+            return element !== "" ? true : false;
+          }).length
+        }{" "}
+        words and {text.length} chararcters
         <h2>Preview</h2>
         {text.length > 0 ? text : "Enter text to preview"}
       </div>
