@@ -64,19 +64,22 @@ export default function TextForm(props) {
         >
           {/* {console.log(props.mode)} */}
         </textarea>
-        <button className="btn btn-primary me-2" onClick={handleUpClick}>
-          Convert to Uppercase
+        <button className="btn btn-primary me-2 my-2" onClick={handleUpClick}>
+          Uppercase
         </button>
-        <button className="btn btn-primary me-2" onClick={handleLowClick}>
-          Convert to Lowercase
+        <button className="btn btn-primary me-2 my-2" onClick={handleLowClick}>
+          Lowercase
         </button>
-        <button className="btn btn-primary me-2" onClick={handleCamClick}>
-          Convert to Camelcase
+        <button className="btn btn-primary me-2 my-2" onClick={handleCamClick}>
+          Camelcase
         </button>
-        <button className="btn btn-primary me-2" onClick={handleAltClick}>
-          Convert to aLtErNaTiNgCaSe
+        <button className="btn btn-primary me-2 my-2" onClick={handleAltClick}>
+          aLtErNaTiNgCaSe
         </button>
-        <button className="btn btn-primary me-2" onClick={handleClearClick}>
+        <button
+          className="btn btn-primary me-2 my-2"
+          onClick={handleClearClick}
+        >
           Clear
         </button>
         <h2>Total Summary</h2>
